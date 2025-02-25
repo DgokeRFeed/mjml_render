@@ -61,7 +61,9 @@ module MjmlRender
     end
 
     def disable_mjml(name)
-      disabled_mjml_actions << name.to_s
+      @disabled_mjml_actions ||= []
+
+      @disabled_mjml_actions << name.to_s
     end
   end
 end
